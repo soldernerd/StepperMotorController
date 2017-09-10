@@ -1137,6 +1137,32 @@ PEC11-4xxxF-Sxxxx</description>
 <text x="-6.35" y="1.905" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-6.35" y="-1.905" size="1.016" layer="27" ratio="10" align="top-left">&gt;VALUE</text>
 </package>
+<package name="200MIL_3X">
+<description>3-pin 200mil header 1.3mm drill</description>
+<wire x1="-7.62" y1="3.8" x2="7.62" y2="3.8" width="0.15" layer="21"/>
+<wire x1="7.62" y1="3.8" x2="7.62" y2="-4.3" width="0.15" layer="21"/>
+<wire x1="7.62" y1="-4.3" x2="-7.62" y2="-4.3" width="0.15" layer="21"/>
+<wire x1="-7.62" y1="-4.3" x2="-7.62" y2="3.8" width="0.15" layer="21"/>
+<pad name="1" x="-5.08" y="0" drill="1.3" shape="long" rot="R90" thermals="no"/>
+<pad name="2" x="0" y="0" drill="1.3" shape="long" rot="R90"/>
+<text x="0" y="3" size="1.016" layer="25" ratio="10" align="center">&gt;NAME</text>
+<text x="0" y="-3" size="1.016" layer="27" ratio="10" align="center">&gt;VALUE</text>
+<pad name="3" x="5.08" y="0" drill="1.3" shape="long" rot="R90"/>
+<wire x1="0" y1="3.6" x2="0" y2="2.3" width="0.15" layer="51"/>
+<wire x1="0" y1="3.6" x2="-0.4" y2="3.1" width="0.15" layer="51"/>
+<wire x1="0" y1="3.6" x2="0.4" y2="3.1" width="0.15" layer="51"/>
+</package>
+<package name="100MIL_3X">
+<wire x1="-3.81" y1="1.778" x2="3.81" y2="1.778" width="0.15" layer="21"/>
+<wire x1="3.81" y1="1.778" x2="3.81" y2="-1.778" width="0.15" layer="21"/>
+<wire x1="3.81" y1="-1.778" x2="-3.81" y2="-1.778" width="0.15" layer="21"/>
+<wire x1="-3.81" y1="-1.778" x2="-3.81" y2="1.778" width="0.15" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1" shape="long" rot="R90"/>
+<text x="-3.81" y="1.905" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-1.905" size="1.016" layer="27" ratio="10" align="top-left">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="USB_B">
@@ -1286,6 +1312,23 @@ PEC11-4xxxF-Sxxxx</description>
 <text x="6.985" y="-1.27" size="1.016" layer="95" align="center">4</text>
 <text x="9.525" y="-1.27" size="1.016" layer="95" align="center">5</text>
 </symbol>
+<symbol name="CON_3X">
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-1.905" x2="-3.81" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-1.905" x2="3.81" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.254" layer="94"/>
+<circle x="-2.54" y="0" radius="0.635" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="0.635" width="0.254" layer="94"/>
+<circle x="2.54" y="0" radius="0.635" width="0.254" layer="94"/>
+<text x="-3.81" y="0" size="1.27" layer="95" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="3.81" y="0" size="1.27" layer="96" rot="R90" align="top-center">&gt;VALUE</text>
+<text x="-3.175" y="-1.27" size="1.016" layer="95" align="center">1</text>
+<pin name="1" x="-2.54" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="2.54" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<text x="-0.635" y="-1.27" size="1.016" layer="95" align="center">2</text>
+<text x="1.905" y="-1.27" size="1.016" layer="95" align="center">3</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="USB_B" prefix="CON">
@@ -1422,6 +1465,34 @@ PEC11-4xxxF-Sxxxx</description>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
 <connect gate="G$1" pin="5" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CON_3X" prefix="CON">
+<description>3-pin header</description>
+<gates>
+<gate name="G$1" symbol="CON_3X" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="200MIL" package="200MIL_3X">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="100MIL" package="100MIL_3X">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2899,6 +2970,9 @@ MELF 0.10 W</description>
 <part name="P+9" library="00Supply" deviceset="+5V" device=""/>
 <part name="R25" library="00Resistor" deviceset="RESISTOR" device="R0805" value="220"/>
 <part name="CON6" library="00Connector" deviceset="CON_4X" device="200MIL"/>
+<part name="CON3" library="00Connector" deviceset="CON_3X" device="100MIL"/>
+<part name="P+10" library="00Supply" deviceset="+5V" device=""/>
+<part name="GND68" library="00Supply" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2986,6 +3060,9 @@ MELF 0.10 W</description>
 <instance part="GND66" gate="1" x="12.7" y="124.46"/>
 <instance part="GND67" gate="1" x="7.62" y="124.46"/>
 <instance part="CON6" gate="G$1" x="76.2" y="111.76" rot="MR270"/>
+<instance part="CON3" gate="G$1" x="185.42" y="109.22" rot="R90"/>
+<instance part="P+10" gate="1" x="193.04" y="119.38"/>
+<instance part="GND68" gate="1" x="193.04" y="101.6"/>
 </instances>
 <busses>
 </busses>
@@ -3188,6 +3265,12 @@ MELF 0.10 W</description>
 <pinref part="C38" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="127" x2="12.7" y2="139.7" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="CON3" gate="G$1" pin="1"/>
+<pinref part="GND68" gate="1" pin="GND"/>
+<wire x1="187.96" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="106.68" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="PGD/FAN" class="0">
 <segment>
@@ -3314,11 +3397,9 @@ MELF 0.10 W</description>
 <net name="USB+" class="0">
 <segment>
 <pinref part="CON1" gate="G$1" pin="DATA+"/>
-<wire x1="27.94" y1="109.22" x2="50.8" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="109.22" x2="58.42" y2="109.22" width="0.1524" layer="91"/>
 <label x="33.02" y="109.22" size="1.778" layer="95"/>
-<wire x1="50.8" y1="109.22" x2="50.8" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="CON5" gate="G$1" pin="2"/>
-<wire x1="50.8" y1="111.76" x2="58.42" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="CON5" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="A" pin="RC5/D+/VP"/>
@@ -3329,11 +3410,9 @@ MELF 0.10 W</description>
 <net name="USB-" class="0">
 <segment>
 <pinref part="CON1" gate="G$1" pin="DATA-"/>
-<wire x1="27.94" y1="111.76" x2="48.26" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="111.76" x2="58.42" y2="111.76" width="0.1524" layer="91"/>
 <label x="33.02" y="111.76" size="1.778" layer="95"/>
-<wire x1="48.26" y1="111.76" x2="48.26" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="CON5" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="114.3" x2="58.42" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="CON5" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="A" pin="RC4/D-/VM"/>
@@ -3372,13 +3451,9 @@ MELF 0.10 W</description>
 <net name="USB_SENSE" class="0">
 <segment>
 <pinref part="CON1" gate="G$1" pin="+5V"/>
-<wire x1="27.94" y1="114.3" x2="45.72" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="114.3" x2="58.42" y2="114.3" width="0.1524" layer="91"/>
 <label x="45.72" y="114.3" size="1.778" layer="95" rot="MR0"/>
-<wire x1="45.72" y1="114.3" x2="45.72" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="106.68" x2="53.34" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="106.68" x2="53.34" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="CON5" gate="G$1" pin="3"/>
-<wire x1="53.34" y1="109.22" x2="58.42" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="CON5" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="A" pin="RC6/TX1/CK1/RP17"/>
@@ -3522,6 +3597,12 @@ MELF 0.10 W</description>
 <wire x1="200.66" y1="55.88" x2="200.66" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="55.88" x2="200.66" y2="55.88" width="0.1524" layer="91"/>
 <junction x="200.66" y="55.88"/>
+</segment>
+<segment>
+<pinref part="CON3" gate="G$1" pin="3"/>
+<pinref part="P+10" gate="1" pin="+5V"/>
+<wire x1="187.96" y1="111.76" x2="193.04" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="111.76" x2="193.04" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STEP3" class="0">
@@ -3700,6 +3781,11 @@ MELF 0.10 W</description>
 <pinref part="IC1" gate="A" pin="RA0/AN0/C1INA/ULPWU/RP0"/>
 <wire x1="55.88" y1="71.12" x2="30.48" y2="71.12" width="0.1524" layer="91"/>
 <label x="33.02" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CON3" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="109.22" x2="208.28" y2="109.22" width="0.1524" layer="91"/>
+<label x="193.04" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
