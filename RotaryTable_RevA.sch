@@ -2943,7 +2943,7 @@ MELF 0.10 W</description>
 <part name="C37" library="00Capacitor" deviceset="C" device="C1206" value="10u 25V"/>
 <part name="GND60" library="00Supply" deviceset="GND" device=""/>
 <part name="GND61" library="00Supply" deviceset="GND" device=""/>
-<part name="L1" library="00Inductor" deviceset="INDUCTOR" device="SRN5040"/>
+<part name="L1" library="00Inductor" deviceset="INDUCTOR" device="SRN5040" value="22u"/>
 <part name="GND62" library="00Supply" deviceset="GND" device=""/>
 <part name="GND63" library="00Supply" deviceset="GND" device=""/>
 <part name="GND64" library="00Supply" deviceset="GND" device=""/>
@@ -3044,9 +3044,9 @@ MELF 0.10 W</description>
 <instance part="IC7" gate="G$1" x="134.62" y="104.14"/>
 <instance part="IC6" gate="G$1" x="223.52" y="96.52"/>
 <instance part="C28" gate="G$1" x="238.76" y="83.82"/>
-<instance part="C29" gate="G$1" x="195.58" y="83.82"/>
-<instance part="R20" gate="G$1" x="203.2" y="91.44"/>
-<instance part="GND54" gate="1" x="195.58" y="76.2" rot="MR0"/>
+<instance part="C29" gate="G$1" x="182.88" y="83.82"/>
+<instance part="R20" gate="G$1" x="190.5" y="91.44"/>
+<instance part="GND54" gate="1" x="182.88" y="76.2" rot="MR0"/>
 <instance part="GND55" gate="1" x="238.76" y="76.2" rot="MR0"/>
 <instance part="GND56" gate="1" x="210.82" y="76.2" rot="MR0"/>
 <instance part="+3V4" gate="G$1" x="238.76" y="111.76"/>
@@ -3760,32 +3760,33 @@ MELF 0.10 W</description>
 <label x="243.84" y="124.46" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="TEMP" class="0">
 <segment>
 <pinref part="IC6" gate="G$1" pin="OUT"/>
 <pinref part="R20" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="91.44" x2="213.36" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="TEMP_SENSE" class="0">
-<segment>
-<pinref part="R20" gate="G$1" pin="1"/>
-<wire x1="198.12" y1="91.44" x2="195.58" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="C29" gate="G$1" pin="1"/>
-<wire x1="195.58" y1="91.44" x2="180.34" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="86.36" x2="195.58" y2="91.44" width="0.1524" layer="91"/>
-<junction x="195.58" y="91.44"/>
-<label x="180.34" y="91.44" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="A" pin="RA0/AN0/C1INA/ULPWU/RP0"/>
-<wire x1="55.88" y1="71.12" x2="30.48" y2="71.12" width="0.1524" layer="91"/>
-<label x="33.02" y="71.12" size="1.778" layer="95"/>
+<wire x1="195.58" y1="91.44" x2="213.36" y2="91.44" width="0.1524" layer="91"/>
+<label x="198.12" y="91.44" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="CON3" gate="G$1" pin="2"/>
 <wire x1="187.96" y1="109.22" x2="208.28" y2="109.22" width="0.1524" layer="91"/>
 <label x="193.04" y="109.22" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="TEMP_SENSE" class="0">
+<segment>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="91.44" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="C29" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="91.44" x2="167.64" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="86.36" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
+<junction x="182.88" y="91.44"/>
+<label x="167.64" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="A" pin="RA0/AN0/C1INA/ULPWU/RP0"/>
+<wire x1="55.88" y1="71.12" x2="30.48" y2="71.12" width="0.1524" layer="91"/>
+<label x="33.02" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">

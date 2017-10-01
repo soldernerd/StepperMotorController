@@ -376,7 +376,7 @@ UsedLibrary="C:/EAGLE-7.6.0/lbr/zilog.lbr"
 
 [Win_1]
 Type="Library Editor"
-Loc="-9 -9 1910 991"
+Loc="0 0 1919 1000"
 State=1
 Number=3
 File="C:/Users/luke/OneDrive/EmbeddedSystems/eagle/Libraries/00Inductor.lbr"
@@ -423,11 +423,11 @@ Package="SRN5040"
 
 [Win_2]
 Type="Control Panel"
-Loc="0 0 1919 1029"
+Loc="1916 -4 3835 1176"
 State=1
 Number=0
 
 [Desktop]
-Screen="1920 1080"
+Screen="3840 1200"
 Window="Win_1"
 Window="Win_2"
