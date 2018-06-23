@@ -2913,7 +2913,7 @@ MELF 0.10 W</description>
 <part name="P+4" library="supply1" deviceset="+24V" device=""/>
 <part name="P+5" library="supply1" deviceset="+24V" device=""/>
 <part name="GND53" library="00Supply" deviceset="GND" device=""/>
-<part name="IC7" library="00Transistor" deviceset="ULN2003" device=""/>
+<part name="IC7" library="00Transistor" deviceset="ULN2003" device="" value="TPL7407"/>
 <part name="IC6" library="00Sensor" deviceset="LMT86" device=""/>
 <part name="C28" library="00Capacitor" deviceset="C" device="C0805" value="100n"/>
 <part name="C29" library="00Capacitor" deviceset="C" device="C0805" value="1u"/>
@@ -2928,7 +2928,7 @@ MELF 0.10 W</description>
 <part name="X2" library="00MyParts" deviceset="BUZZER" device=""/>
 <part name="R21" library="00Resistor" deviceset="RESISTOR" device="R0805" value="10k"/>
 <part name="P+6" library="supply1" deviceset="+24V" device=""/>
-<part name="IC8" library="00VoltageRegulator" deviceset="MCP16311" device=""/>
+<part name="IC8" library="00VoltageRegulator" deviceset="MCP16311" device="" value="MCP16312"/>
 <part name="C30" library="00Capacitor" deviceset="C" device="C0805" value="1u"/>
 <part name="GND57" library="00Supply" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" deviceset="+24V" device=""/>
@@ -3925,7 +3925,7 @@ MELF 0.10 W</description>
 <instance part="GND57" gate="1" x="152.4" y="27.94"/>
 <instance part="P+7" gate="1" x="129.54" y="93.98"/>
 <instance part="GND58" gate="1" x="137.16" y="27.94"/>
-<instance part="C31" gate="G$1" x="205.74" y="81.28"/>
+<instance part="C31" gate="G$1" x="198.12" y="81.28"/>
 <instance part="GND59" gate="1" x="187.96" y="27.94"/>
 <instance part="C32" gate="G$1" x="228.6" y="53.34"/>
 <instance part="C33" gate="G$1" x="236.22" y="53.34"/>
@@ -3935,7 +3935,7 @@ MELF 0.10 W</description>
 <instance part="C37" gate="G$1" x="137.16" y="53.34"/>
 <instance part="GND60" gate="1" x="129.54" y="27.94"/>
 <instance part="GND61" gate="1" x="144.78" y="27.94"/>
-<instance part="L1" gate="G$1" x="218.44" y="73.66"/>
+<instance part="L1" gate="G$1" x="208.28" y="73.66"/>
 <instance part="GND62" gate="1" x="228.6" y="27.94"/>
 <instance part="GND63" gate="1" x="236.22" y="27.94"/>
 <instance part="GND64" gate="1" x="243.84" y="27.94"/>
@@ -3951,10 +3951,10 @@ MELF 0.10 W</description>
 <instance part="+3V15" gate="G$1" x="104.14" y="114.3"/>
 <instance part="+3V16" gate="G$1" x="104.14" y="60.96"/>
 <instance part="P+8" gate="1" x="243.84" y="93.98"/>
-<instance part="R22" gate="G$1" x="205.74" y="53.34" rot="R90"/>
-<instance part="R23" gate="G$1" x="205.74" y="38.1" rot="R90"/>
-<instance part="GND65" gate="1" x="205.74" y="27.94"/>
-<instance part="R24" gate="G$1" x="205.74" y="66.04" rot="R90"/>
+<instance part="R22" gate="G$1" x="218.44" y="53.34" rot="R90"/>
+<instance part="R23" gate="G$1" x="218.44" y="38.1" rot="R90"/>
+<instance part="GND65" gate="1" x="218.44" y="27.94"/>
+<instance part="R24" gate="G$1" x="218.44" y="66.04" rot="R90"/>
 <instance part="P+9" gate="1" x="228.6" y="170.18"/>
 <instance part="R25" gate="G$1" x="228.6" y="160.02" rot="R90"/>
 </instances>
@@ -4174,7 +4174,7 @@ MELF 0.10 W</description>
 <segment>
 <pinref part="GND65" gate="1" pin="GND"/>
 <pinref part="R23" gate="G$1" pin="1"/>
-<wire x1="205.74" y1="33.02" x2="205.74" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="33.02" x2="218.44" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC2_B" class="0">
@@ -4587,15 +4587,16 @@ MELF 0.10 W</description>
 <wire x1="185.42" y1="78.74" x2="193.04" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="78.74" x2="193.04" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="C31" gate="G$1" pin="1"/>
-<wire x1="193.04" y1="86.36" x2="205.74" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="86.36" x2="205.74" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="86.36" x2="198.12" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="86.36" x2="198.12" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
 <segment>
 <pinref part="L1" gate="G$1" pin="2"/>
-<wire x1="226.06" y1="73.66" x2="228.6" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="73.66" x2="218.44" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="C32" gate="G$1" pin="1"/>
+<wire x1="218.44" y1="73.66" x2="228.6" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="73.66" x2="236.22" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="73.66" x2="243.84" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="73.66" x2="243.84" y2="91.44" width="0.1524" layer="91"/>
@@ -4608,6 +4609,9 @@ MELF 0.10 W</description>
 <junction x="236.22" y="73.66"/>
 <junction x="243.84" y="73.66"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
+<pinref part="R24" gate="G$1" pin="2"/>
+<wire x1="218.44" y1="71.12" x2="218.44" y2="73.66" width="0.1524" layer="91"/>
+<junction x="218.44" y="73.66"/>
 </segment>
 <segment>
 <pinref part="R25" gate="G$1" pin="2"/>
@@ -4619,35 +4623,22 @@ MELF 0.10 W</description>
 <segment>
 <pinref part="R22" gate="G$1" pin="1"/>
 <pinref part="R23" gate="G$1" pin="2"/>
-<wire x1="205.74" y1="43.18" x2="205.74" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="45.72" x2="205.74" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="45.72" x2="210.82" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="43.18" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="45.72" x2="218.44" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="45.72" x2="223.52" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="IC8" gate="G$1" pin="FB"/>
 <wire x1="154.94" y1="83.82" x2="152.4" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="83.82" x2="152.4" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="91.44" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="45.72" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
-<junction x="205.74" y="45.72"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="L1" gate="G$1" pin="1"/>
-<pinref part="C31" gate="G$1" pin="2"/>
-<wire x1="205.74" y1="73.66" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="73.66" x2="213.36" y2="73.66" width="0.1524" layer="91"/>
-<junction x="205.74" y="73.66"/>
-<pinref part="IC8" gate="G$1" pin="SW"/>
-<wire x1="185.42" y1="73.66" x2="205.74" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="R24" gate="G$1" pin="2"/>
-<wire x1="205.74" y1="73.66" x2="205.74" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="91.44" x2="223.52" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="45.72" x2="223.52" y2="91.44" width="0.1524" layer="91"/>
+<junction x="218.44" y="45.72"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="R22" gate="G$1" pin="2"/>
 <pinref part="R24" gate="G$1" pin="1"/>
-<wire x1="205.74" y1="60.96" x2="205.74" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="60.96" x2="218.44" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PGC/!RESET!" class="0">
@@ -4663,6 +4654,17 @@ MELF 0.10 W</description>
 <pinref part="R25" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="147.32" x2="228.6" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="147.32" x2="228.6" y2="154.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="IC8" gate="G$1" pin="SW"/>
+<pinref part="L1" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="73.66" x2="198.12" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="C31" gate="G$1" pin="2"/>
+<wire x1="198.12" y1="73.66" x2="203.2" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="76.2" x2="198.12" y2="73.66" width="0.1524" layer="91"/>
+<junction x="198.12" y="73.66"/>
 </segment>
 </net>
 </nets>
