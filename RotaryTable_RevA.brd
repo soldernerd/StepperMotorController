@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="12.5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -204,6 +204,8 @@
 <text x="43.4975" y="56.1975" size="1.4224" layer="21" font="vector" ratio="13" rot="R180" align="center-right">GND</text>
 <text x="43.4975" y="53.6575" size="1.4224" layer="21" font="vector" ratio="13" rot="R180" align="center-right">TMP</text>
 <text x="43.4975" y="51.1175" size="1.4224" layer="21" font="vector" ratio="13" rot="R180" align="center-right">5V</text>
+<dimension x1="5" y1="65" x2="5" y2="5" x3="-3" y3="35" textsize="1.778" layer="27"/>
+<dimension x1="5" y1="5" x2="85" y2="5" x3="45" y3="-7" textsize="1.778" layer="27"/>
 </plain>
 <libraries>
 <library name="00Capacitor">
